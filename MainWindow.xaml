@@ -1,0 +1,18 @@
+<Window x:Class="WpfTutorialSamples.Rich_text_controls.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Rich Text Editor Sample" Height="450" Width="800">
+    <Grid>
+        <ToolBar>
+            <ComboBox Name="cmbFontFamily" Width="200" SelectionChanged="cmbFontFamily_SelectionChanged" />
+            <ComboBox Name="cmbFontSize" Width="50" TextChanged="cmbFontSize_TextChanged" />
+            <ToggleButton Name="btnBold" Content="B" FontWeight="Bold" Click="ToggleButton_Click"/>
+            <ToggleButton Name="btnItalic" Content="I" FontStyle="Italic" Click="ToggleButton_Click"/>
+            <ToggleButton Name="btnUnderline" Content="U" TextDecorations="Underline" Click="ToggleButton_Click"/>
+            <Button Command="ApplicationCommands.Open" Content="Open" />
+            <Button Command="ApplicationCommands.Save" Content="Save" />
+        </ToolBar>
+        <RichTextBox Name="rtbEditor" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,50,0,0" 
+                     SelectionChanged="rtbEditor_SelectionChanged" />
+    </Grid>
+</Window>
